@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>FLORES</title>
+    <style>
+        /* Estilo para la página */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Estilo para los saludos */
+        .greetings {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        /* Estilo para la descripción */
+        .description {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para el botón */
+        .button button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Estilo para los corazones animados */
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 10px;
+            top: 0;
+        }
+
+        /* Animación de rebote */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) rotate(-45deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(-45deg);
+            }
+        }
+
+        /* Posiciones aleatorias para los corazones */
+        .heart:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+        .heart:nth-child(2) { top: 30%; left: 50%; animation-delay: 0.5s; }
+        .heart:nth-child(3) { top: 50%; left: 80%; animation-delay: 1s; }
+        .heart:nth-child(4) { top: 70%; left: 30%; animation-delay: 1.5s; }
+        .heart:nth-child(5) { top: 90%; left: 60%; animation-delay: 2s; }
+    </style>
+</head>
+<body>
+    <!-- Corazones animados -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+
+    <!-- Saludo "PARA" -->
+    <div class="greetings">
+        <span>P</span>
+        <span>A</span>
+        <span>R</span>
+        <span>A</span>
+    </div>
+
+    <!-- Saludo "NICOL" -->
+    <div class="greetings">
+        <span>N</span>
+        <span>I</span>
+        <span>C</span>
+        <span>O</span>
+        <span>L</span>
+    </div>
+
+    <!-- Descripción -->
+    <div class="description">
+        <span>DE TU INGENIERO FAVORITO CON MUCHO AMOR!!</span>
+    </div>
+
+    <!-- Botón -->
+    <div class="button">
+        <button>
+            <a href="FLORES.html">Haga Clic</a>
+        </button>
+    </div>
+</body>
+</html>
